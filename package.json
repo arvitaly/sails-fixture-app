@@ -19,8 +19,12 @@
   },
   "homepage": "https://github.com/arvitaly/sails-graphql-fixture-app#readme",
   "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "sails": "^0.12.11",
     "sails-hook-graphql": "^0.1.2",
-    "sails-memory": "^0.10.7"
+    "sails-memory": "^0.10.7",
+    "sails-typings": "^0.2.3"
   },
   "jest": {
     "automock": true,
