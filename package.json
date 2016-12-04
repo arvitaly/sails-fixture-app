@@ -1,6 +1,6 @@
 {
   "name": "sails-fixture-app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arvitaly/sails-graphql-fixture-app.git"
+    "url": "git+https://github.com/arvitaly/sails-fixture-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/arvitaly/sails-graphql-fixture-app/issues"
+    "url": "https://github.com/arvitaly/sails-fixture-app/issues"
   },
-  "homepage": "https://github.com/arvitaly/sails-graphql-fixture-app#readme",
+  "homepage": "https://github.com/arvitaly/sails-fixture-app#readme",
   "dependencies": {
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
