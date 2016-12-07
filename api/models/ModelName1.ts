@@ -25,5 +25,8 @@ export = {
         model2Field: {
             model: "model2",
         },
+        model3s: {
+            collection: "model3",
+        },
     },
 };

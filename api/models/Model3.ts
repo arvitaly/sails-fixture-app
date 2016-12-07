@@ -1,0 +1,5 @@
+export = {
+    attributes: {
+        title: "string",
+    },
+};
