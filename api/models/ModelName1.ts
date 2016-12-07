@@ -1,9 +1,5 @@
 export = {
     attributes: {
-        id: {
-            type: "integer",
-            primaryKey: true,
-        },
         name: "string",
         title: {
             type: "string",
