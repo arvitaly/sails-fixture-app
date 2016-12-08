@@ -9,11 +9,11 @@ const dt1 = new Date("Fri Nov 18 2016 18:25:11 GMT+0700 (SE Asia Standard Time)"
 function createModel1(sails) {
     ++id;
     const name = "na" + (id);
-    return sails.models[exports.model1Id].create({
+    return {
         firstActive: dt1, id, isActive: false, name, num: 15,
         updatedAt: dt1,
         createdAt: dt1,
-    });
+    };
 }
 exports.createModel1 = createModel1;
 function lower(sails) {
