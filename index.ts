@@ -4,7 +4,7 @@ export { default as lift } from "./lift";
 let id = 0;
 export const model1Id = "modelname1";
 const dt1 = new Date("Fri Nov 18 2016 18:25:11 GMT+0700 (SE Asia Standard Time)");
-export function createModel1(sails: Sails.App) {
+export function createModel1() {
     ++id;
     const name = "na" + (id);
     return {
