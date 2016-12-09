@@ -9,5 +9,8 @@ module.exports = {
             collection: "model3",
             via: "model4s",
         },
+        model5Field: {
+            model: "model5",
+        },
     },
 };
