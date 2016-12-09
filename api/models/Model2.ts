@@ -8,5 +8,10 @@ export = {
         model3s: {
             collection: "model3",
         },
+        model4s: {
+            // one to many
+            collection: "model4",
+            via: "owner",
+        },
     },
 };
