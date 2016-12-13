@@ -1,6 +1,5 @@
 import httpRequest = require("request");
-import { createModel1 } from "./../";
-import { lift, RemoteApp } from "./../remote";
+import { createModel1, lift, RemoteApp } from "./../";
 describe("Lift tests", () => {
     let app: RemoteApp;
     beforeEach(async () => {

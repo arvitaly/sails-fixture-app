@@ -1,8 +1,8 @@
 "use strict";
-var start_1 = require("./start");
-exports.start = start_1.default;
-var lift_1 = require("./lift");
-exports.lift = lift_1.default;
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(require("./remote"));
 let id = 0;
 exports.model1Id = "modelname1";
 exports.model2Id = "model2";
@@ -17,15 +17,4 @@ function createModel1(realId) {
     };
 }
 exports.createModel1 = createModel1;
-function lower(sails) {
-    return new Promise((resolve, reject) => {
-        sails.lower((err) => {
-            if (err) {
-                reject(err);
-                return;
-            }
-            setTimeout(resolve, 1000);
-        });
-    });
-}
-exports.lower = lower;
+;

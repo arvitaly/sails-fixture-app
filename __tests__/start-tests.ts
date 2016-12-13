@@ -1,5 +1,4 @@
-import { createModel1, model1Id } from "./..";
-import { RemoteApp, start } from "./../remote";
+import { createModel1, model1Id, RemoteApp, start } from "./..";
 describe("start tests", () => {
     let app: RemoteApp;
     beforeEach(async () => {
