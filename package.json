@@ -22,20 +22,19 @@
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "sails": "^0.12.11",
-    "sails-hook-graphql": "^0.1.2",
+    "sails-hook-graphql": "^0.2.7",
     "sails-memory": "^0.10.7",
     "sails-typings": "^0.2.3"
   },
   "jest": {
-    "automock": true,
-    "unmockedModulePathPatterns": [
-      "react"
-    ]
+    "automock": false
   },
   "devDependencies": {
     "@types/jest": "^16.0.1",
+    "@types/request": "0.0.36",
     "coveralls": "^2.11.15",
     "jest": "^17.0.3",
+    "request": "^2.79.0",
     "tslint": "^4.0.2",
     "typescript": "^2.0.10"
   }

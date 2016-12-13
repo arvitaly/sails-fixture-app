@@ -1,0 +1,19 @@
+exports[`start tests create 1`] = `
+Object {
+  "firstActive": "2016-11-18T11:25:11.000Z",
+  "id": 1,
+  "isActive": false,
+  "name": "na1",
+  "num": 15,
+}
+`;
+
+exports[`start tests update 1`] = `
+Object {
+  "firstActive": "2016-11-18T11:25:11.000Z",
+  "id": 2,
+  "isActive": false,
+  "name": "test1",
+  "num": 15,
+}
+`;
