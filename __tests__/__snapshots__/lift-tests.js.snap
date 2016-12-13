@@ -1,1 +1,0 @@
-exports[`Lift tests http create and get model 1`] = `"[{\"model3s\":[],\"firstActive\":\"2016-11-18T11:25:11.000Z\",\"id\":1,\"isActive\":false,\"name\":\"na1\",\"num\":15,\"updatedAt\":\"2016-11-18T11:25:11.000Z\",\"createdAt\":\"2016-11-18T11:25:11.000Z\"}]"`;

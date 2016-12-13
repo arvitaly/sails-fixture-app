@@ -11,8 +11,8 @@ describe("Lift tests", () => {
     it("http create and get model", async () => {
         let result = await postRequest("http://127.0.0.1:14001/modelName1", createModel1());
         result = await getRequest("http://127.0.0.1:14001/modelName1");
-        delete result.createdAt;
-        delete result.updatedAt;
+        delete result[0].createdAt;
+        delete result[0].updatedAt;
         expect(result).toMatchSnapshot();
     });
 });
@@ -50,7 +50,7 @@ function getRequest(url: string, params?: any): Promise<any> {
                 reject("Invalid status code: " + response.statusCode);
                 return;
             }
-            done(body);
+            done(JSON.parse(body));
         });
     });
 };

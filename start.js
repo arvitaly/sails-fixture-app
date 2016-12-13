@@ -9,31 +9,56 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const path_1 = require("path");
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = (path) => __awaiter(this, void 0, void 0, function* () {
+exports.default = (config = {}) => __awaiter(this, void 0, void 0, function* () {
+    global.$remote$ = {};
+    const modules = ["sails-memory", "sails-hook-graphql"];
+    modules.map((m) => {
+        try {
+            global.$remote$[m] = require.resolve(m);
+        }
+        catch (e) {
+            console.error(e);
+        }
+    });
+    const path = config.path;
+    const port = config.port || 14001;
     const Sails = require("sails");
     const SailsConstructor = Sails.constructor;
+    const sailsConfig = {
+        appPath: path_1.resolve(path || __dirname + "/__fixtures__/app1"),
+        connections: {
+            memory: {
+                adapter: "sails-memory",
+            },
+        },
+        log: {
+            level: "error",
+        },
+        port,
+        models: {
+            connection: "memory",
+            migrate: "drop",
+        },
+    };
     return new Promise((resolve, reject) => {
         let app = new SailsConstructor();
-        app.load({
-            appPath: path_1.resolve(path || __dirname + "/__fixtures__/app1"),
-            connections: {
-                memory: {
-                    adapter: "sails-memory",
-                },
-            },
-            log: {
-                level: "error",
-            },
-            models: {
-                connection: "memory",
-                migrate: "drop",
-            },
-        }, (err, sailsNew) => {
-            if (err) {
-                reject(err);
-                return;
-            }
-            resolve(sailsNew);
-        });
+        if (config.isLift) {
+            app.lift(sailsConfig, (err, sailsNew) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                resolve(sailsNew);
+            });
+        }
+        else {
+            app.load(sailsConfig, (err, sailsNew) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                resolve(sailsNew);
+            });
+        }
     });
 });

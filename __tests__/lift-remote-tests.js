@@ -20,8 +20,8 @@ describe("Lift tests", () => {
     it("http create and get model", () => __awaiter(this, void 0, void 0, function* () {
         let result = yield postRequest("http://127.0.0.1:14001/modelName1", _1.createModel1());
         result = yield getRequest("http://127.0.0.1:14001/modelName1");
-        delete result.createdAt;
-        delete result.updatedAt;
+        delete result[0].createdAt;
+        delete result[0].updatedAt;
         expect(result).toMatchSnapshot();
     }));
 });
@@ -59,7 +59,7 @@ function getRequest(url, params) {
                 reject("Invalid status code: " + response.statusCode);
                 return;
             }
-            done(body);
+            done(JSON.parse(body));
         });
     });
 }

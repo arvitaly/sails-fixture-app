@@ -14,12 +14,10 @@ process.on("message", (message) => __awaiter(this, void 0, void 0, function* () 
     try {
         switch (message.command) {
             case "lift":
-                init();
                 app = yield lift_1.default();
                 send("0", "resolve", {});
                 break;
             case "start":
-                init();
                 app = yield start_1.default();
                 send("0", "resolve", {});
                 break;
@@ -46,19 +44,6 @@ function send(id, type, data) {
         id,
         type,
         data,
-    });
-}
-;
-global.$remote$ = {};
-function init() {
-    const modules = ["sails-memory", "sails-hook-graphql"];
-    modules.map((m) => {
-        try {
-            global.$remote$[m] = require.resolve(m);
-        }
-        catch (e) {
-            console.error(e);
-        }
     });
 }
 ;

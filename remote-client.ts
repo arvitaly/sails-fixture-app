@@ -6,12 +6,10 @@ process.on("message", async (message: any) => {
     try {
         switch (message.command) {
             case "lift":
-                init();
                 app = await lift();
                 send("0", "resolve", {});
                 break;
             case "start":
-                init();
                 app = await start();
                 send("0", "resolve", {});
                 break;
@@ -40,18 +38,5 @@ function send(id: string, type: string, data: any) {
         id,
         type,
         data,
-    });
-};
-
-declare var global: any;
-global.$remote$ = {} as any;
-function init() {
-    const modules = ["sails-memory", "sails-hook-graphql"];
-    modules.map((m) => {
-        try {
-            global.$remote$[m] = require.resolve(m);
-        } catch (e) {
-            console.error(e);
-        }
     });
 };

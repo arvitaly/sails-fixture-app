@@ -1,0 +1,12 @@
+exports[`Lift tests http create and get model 1`] = `
+Array [
+  Object {
+    "firstActive": "2016-11-18T11:25:11.000Z",
+    "id": 1,
+    "isActive": false,
+    "model3s": Array [],
+    "name": "na1",
+    "num": 15,
+  },
+]
+`;
