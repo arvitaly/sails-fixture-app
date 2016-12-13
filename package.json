@@ -1,6 +1,6 @@
 {
   "name": "sails-fixture-app",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/arvitaly/sails-fixture-app#readme",
   "dependencies": {
+    "@types/ncp": "^0.5.29",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
+    "ncp": "^2.0.0",
     "sails": "^0.12.11",
     "sails-hook-graphql": "^0.2.7",
     "sails-memory": "^0.10.7",
