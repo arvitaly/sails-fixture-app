@@ -1,6 +1,6 @@
 {
   "name": "sails-fixture-app",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "grunt-cli": "^1.2.0",
     "ncp": "^2.0.0",
     "sails": "^0.12.11",
-    "sails-hook-graphql": "^0.2.7",
+    "sails-hook-graphql": "^0.2.9",
     "sails-memory": "^0.10.7",
     "sails-typings": "^0.2.3"
   },
