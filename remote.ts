@@ -60,7 +60,7 @@ export class RemoteApp {
         return (this.id++).toString();
     }
     public async kill() {
-        this.child.kill("SIGTERM");
+        this.child.kill();
         return Promise.resolve();
     }
     public create(modelId: string, created: any) {

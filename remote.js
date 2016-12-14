@@ -76,7 +76,7 @@ class RemoteApp {
     }
     kill() {
         return __awaiter(this, void 0, void 0, function* () {
-            this.child.kill("SIGTERM");
+            this.child.kill();
             return Promise.resolve();
         });
     }
