@@ -6,11 +6,11 @@ process.on("message", async (message: any) => {
     try {
         switch (message.command) {
             case "lift":
-                app = await lift();
+                app = await lift(message.data);
                 send("0", "resolve", {});
                 break;
             case "start":
-                app = await start();
+                app = await start(message.data);
                 send("0", "resolve", {});
                 break;
             case "create":

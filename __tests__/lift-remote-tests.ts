@@ -1,9 +1,14 @@
 import httpRequest = require("request");
 import { createModel1, lift, RemoteApp } from "./../";
+import { IStartConfig } from "./../typings";
 describe("Lift tests", () => {
     let app: RemoteApp;
     beforeEach(async () => {
-        app = await lift();
+        app = await lift({
+            modules: {
+                "sails-memory": require.resolve("sails-memory"),
+            },
+        });
     });
     afterEach(async () => {
         await app.kill();

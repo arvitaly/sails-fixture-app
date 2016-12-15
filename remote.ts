@@ -1,15 +1,15 @@
 import { ChildProcess, fork } from "child_process";
-
+import { IStartConfig } from "./typings";
 interface ICommand {
     resolve: (data?: any) => any;
     reject: (err?: any) => any;
 }
-export async function start(config: { port?: number; } = {}) {
+export async function start(config: IStartConfig = {}) {
     const app = new RemoteApp(config);
     await app.start();
     return app;
 }
-export async function lift(config: { port?: number; } = {}) {
+export async function lift(config: IStartConfig = {}) {
     const app = new RemoteApp(config);
     await app.lift();
     return app;
@@ -18,7 +18,7 @@ export class RemoteApp {
     protected commands: { [index: string]: ICommand } = {};
     protected id = 0;
     protected child: ChildProcess;
-    constructor(config: { port?: number; } = {}) {
+    constructor(public config: IStartConfig = {}) {
         this.child = fork(__dirname + "/remote-client");
         this.child.on("message", (data) => {
             switch (data.type) {
@@ -36,10 +36,10 @@ export class RemoteApp {
         });
     }
     public async start() {
-        return this.send("start");
+        return this.send("start", this.config);
     }
     public async lift() {
-        return this.send("lift");
+        return this.send("lift", this.config);
     }
     public async send(command: string, data?: any) {
         const id = this.getMessageId();

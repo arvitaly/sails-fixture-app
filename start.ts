@@ -1,12 +1,17 @@
 import Sails = require("sails");
 import { resolve as resolvePath } from "path";
+import { IStartConfig } from "./typings";
 declare var global: any;
-export default async (config: { port?: number; path?: string; isLift?: boolean; } = {}) => {
+export default async (config: IStartConfig = {}) => {
     global.$remote$ = {} as any;
     const modules = ["sails-memory", "sails-hook-graphql"];
     modules.map((m) => {
         try {
-            global.$remote$[m] = require.resolve(m);
+            if (config.modules && config.modules[m]) {
+                global.$remote$[m] = config.modules[m];
+            } else {
+                global.$remote$[m] = require.resolve(m);
+            }
         } catch (e) {
             console.error(e);
         }
