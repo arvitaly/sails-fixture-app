@@ -38,7 +38,7 @@ export default async (config: IStartConfig = {}) => {
         },
     };
     return new Promise<Sails.App>((resolve, reject) => {
-        let app = new SailsConstructor();
+        const app = new SailsConstructor();
         if (config.isLift) {
             app.lift(sailsConfig, (err: any, sailsNew: Sails.App) => {
                 if (err) {

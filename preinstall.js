@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = require("fs");
 // tslint:disable:line no-var-requires
 const realNcp = require("./ncp").ncp;

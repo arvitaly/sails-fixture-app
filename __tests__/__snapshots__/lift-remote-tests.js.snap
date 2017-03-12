@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Lift tests http create and get model 1`] = `
 Array [
   Object {

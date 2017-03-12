@@ -4,11 +4,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
         function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments)).next());
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const path_1 = require("path");
 Object.defineProperty(exports, "__esModule", { value: true });
+const path_1 = require("path");
 exports.default = (config = {}) => __awaiter(this, void 0, void 0, function* () {
     global.$remote$ = {};
     const modules = ["sails-memory", "sails-hook-graphql"];
@@ -46,7 +46,7 @@ exports.default = (config = {}) => __awaiter(this, void 0, void 0, function* () 
         },
     };
     return new Promise((resolve, reject) => {
-        let app = new SailsConstructor();
+        const app = new SailsConstructor();
         if (config.isLift) {
             app.lift(sailsConfig, (err, sailsNew) => {
                 if (err) {
