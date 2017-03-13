@@ -1,5 +1,7 @@
 # sails-fixture-app
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/arvitaly/sails-fixture-app.svg)](https://greenkeeper.io/)
+
 
 
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]

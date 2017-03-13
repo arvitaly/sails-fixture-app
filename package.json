@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/arvitaly/sails-fixture-app#readme",
   "dependencies": {
-    "@types/ncp": "^0.5.29",
+    "@types/ncp": "^2.0.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "sails": "^0.12.13",
@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@types/jest": "^19.2.1",
-    "@types/request": "0.0.36",
+    "@types/request": "0.0.41",
     "coveralls": "^2.12.0",
     "jest": "^19.0.2",
     "ncp": "^2.0.0",
