@@ -20,6 +20,10 @@ describe("Lift tests", () => {
         delete result[0].updatedAt;
         expect(result).toMatchSnapshot();
     });
+    it("check schema.graphql.json", async () => {
+        const result = await getRequest("http://127.0.0.1:14001/graphql.schema.json");
+        expect(result).toMatchSnapshot();
+    });
 });
 function postRequest(url: string, params?: any) {
     const options = {

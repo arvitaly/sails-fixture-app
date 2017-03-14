@@ -29,6 +29,10 @@ describe("Lift tests", () => {
         delete result[0].updatedAt;
         expect(result).toMatchSnapshot();
     }));
+    it("check schema.graphql.json", () => __awaiter(this, void 0, void 0, function* () {
+        const result = yield getRequest("http://127.0.0.1:14001/graphql.schema.json");
+        expect(result).toMatchSnapshot();
+    }));
 });
 function postRequest(url, params) {
     const options = {
