@@ -33,13 +33,13 @@
     "automock": false
   },
   "devDependencies": {
-    "@types/jest": "^19.2.1",
-    "@types/request": "0.0.41",
-    "coveralls": "^2.12.0",
+    "@types/jest": "^19.2.2",
+    "@types/request": "0.0.42",
+    "coveralls": "^2.13.0",
     "jest": "^19.0.2",
     "ncp": "^2.0.0",
-    "request": "^2.79.0",
-    "tslint": "^4.5.1",
-    "typescript": "^2.2.1"
+    "request": "^2.81.0",
+    "tslint": "^5.0.0",
+    "typescript": "^2.2.2"
   }
 }

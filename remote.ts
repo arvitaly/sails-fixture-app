@@ -76,4 +76,4 @@ export class RemoteApp {
             updated,
         });
     }
-};
+}

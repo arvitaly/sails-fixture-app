@@ -39,4 +39,4 @@ function send(id: string, type: string, data: any) {
         type,
         data,
     });
-};
+}

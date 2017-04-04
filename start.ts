@@ -1,7 +1,7 @@
 import Sails = require("sails");
 import { resolve as resolvePath } from "path";
 import { IStartConfig } from "./typings";
-declare var global: any;
+declare const global: any;
 export default async (config: IStartConfig = {}) => {
     global.$remote$ = {} as any;
     const modules = ["sails-memory", "sails-hook-graphql"];

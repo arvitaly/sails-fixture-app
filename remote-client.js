@@ -47,4 +47,3 @@ function send(id, type, data) {
         data,
     });
 }
-;

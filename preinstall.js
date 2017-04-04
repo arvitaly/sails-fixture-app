@@ -17,7 +17,6 @@ function deleteFolderRecursive(path) {
         fs_1.rmdirSync(path);
     }
 }
-;
 deleteFolderRecursive(__dirname + "/__fixtures__/app1/node_modules");
 realNcp(__dirname + "/__fixtures__/app1/node_modules_", __dirname + "/__fixtures__/app1/node_modules", (err) => {
     if (err) {

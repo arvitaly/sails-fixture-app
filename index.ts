@@ -12,4 +12,4 @@ export function createModel1(realId?: number) {
         updatedAt: dt1,
         createdAt: dt1,
     };
-};
+}

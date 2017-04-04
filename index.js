@@ -18,4 +18,3 @@ function createModel1(realId) {
     };
 }
 exports.createModel1 = createModel1;
-;

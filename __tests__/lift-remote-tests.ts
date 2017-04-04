@@ -62,4 +62,4 @@ function getRequest(url: string, params?: any): Promise<any> {
             done(JSON.parse(body));
         });
     });
-};
+}
